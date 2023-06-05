@@ -1,0 +1,291 @@
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+// ----------------------NAVBAR-----------------------
+.navbar {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+}
+
+.appear {
+  opacity: 100%;
+  filter: blur(0px);
+  transition: 0.5s ease-in-out;
+}
+
+.fade {
+  opacity: 0%;
+  filter: blur(3px);
+  transition: 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+.carousel {
+  margin-top: 5px;
+  height: 85vh;
+  padding-inline: 30px;
+}
+
+
+.heffect:hover {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.teffect {
+  border-bottom: 0px solid;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  padding: 0px;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+}
+
+.teffect2 {
+  border-bottom: 0px solid;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  padding: 0px;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+}
+
+.discover-item:hover {
+  .teffect {
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+    background-color: rgba(147, 150, 155, 0.521);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .teffect2 {
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
+    background-color: rgba(176, 183, 192, 0.521);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+
+
+
+.image-list {
+  height: 400px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  img {
+    cursor: pointer;
+    scroll-snap-align: start;
+  }
+
+
+}
+
+
+.item-view {
+  display: flex;
+  flex-shrink: 0;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  overflow: hidden;
+
+  img {
+    cursor: pointer;
+    object-fit: cover;
+    height: 400px;
+    width: 300px;
+    scroll-snap-align: center;
+  }
+
+  .hover-desc {
+    display: flex;
+    bottom: -64px;
+    transition: 0.3s;
+    background-color: rgba(194, 201, 207, 0.904);
+    // border-top-right-radius: 15px ;
+    // border-top-left-radius: 15px ;
+    border: solid 1px;
+    border-color: rgb(226 232 240);
+    h3 {
+      display: flex;
+      margin: auto;
+    }
+  }
+}
+
+.item-view :hover {
+  overflow: visible;
+  transform: scale(1.06); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transition: 0.3s ease-in-out;
+}
+
+.item-view:hover > .hover-desc {
+  bottom: 0px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer {
+  bottom: 0%;
+  min-height: 120px;
+  background-color: rgb(189, 180, 180);
+}
+.push-footer {
+  min-height: calc(100vh - 70px);
+}
+
+
+// ----------------------ARTICLE-----------------------
+
+.article-view {
+  min-height: 80vh;
+}
+
+.article-img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 600px;
+  flex-shrink: 0;
+  transition: 0.5s;
+}
+
+.article-gallery {
+
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+.details{
+  height: calc(100% - 260px);
+}
+
+.buy {
+  height: 260px;
+}
+
+.buy-button {
+  color: white;
+  font-weight: light;
+}
+
+.buy-button:hover {
+  .buy-logo {
+    animation: wobble-hor-bottom 0.8s both;
+  }
+
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-10px) rotate(-3deg);
+  }
+  30% {
+    transform: translateX(5px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-5px) rotate(-1.6deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(1.4deg);
+  }
+  75% {
+    transform: translateX(-3px) rotate(-0.8deg);
+  }
+}
+
+.article-card {
+  margin: auto;
+  max-width: 100%;
+  width: 600px;
+  height: 600px;
+  max-height: 100%;
+
+  img {
+    flex: auto;
+    object-fit: cover;
+    height: 90%;
+  }
+  .article-title {
+    height: 10%;
+  }
+
+  
+}
+
+
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+  .carousel {
+    height: 75vh;
+    padding-inline: 2px;
+
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .carousel {
+    height: 85vh;
+    padding-inline: 20px;
+
+  }
+  
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .carousel {
+    height: 85vh;
+
+  }
+}
