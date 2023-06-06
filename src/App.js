@@ -25,8 +25,8 @@ function App() {
     <div className="App">
       <div className='push-footer'>
       <BrowserRouter>
-        <ScrollToTop/>
         <Navbar/>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="catalog" element={<Catalog/>} />
