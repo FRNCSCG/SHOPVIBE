@@ -18,11 +18,11 @@ export default function Carousell() {
             alt="..."
           />
           <img className='h-full object-cover'
-            src="https://images.pexels.com/photos/932401/pexels-photo-932401.jpeg?auto=compress&cs=tinysrgb"
+            src="https://wallpaperboat.com/wp-content/uploads/2019/12/dior-03.jpg"
             alt="..."
           />
           <img className='h-full object-cover'
-            src="https://images.pexels.com/photos/833052/pexels-photo-833052.jpeg?auto=compress&cs=tinysrgb"
+            src="https://cdn.wallpapersafari.com/86/7/jB3HgD.jpg"
             alt="..."
           />
           <img className='h-full object-cover'
